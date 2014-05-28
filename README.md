@@ -12,7 +12,7 @@ The class is organized into alternating blocks of lectures and coding exercises 
 - Any plain text editor will suffice for you to edit the exercise files. [Sublime Text](http://www.sublimetext.com/download) is a good choice.
 
 #### What if I finish an exercise with extra time?
-If you finish one of the assignments ahead of schedule, your best bet is to research and reinforce any previous concepts you'd felt shakey on, since each lecture is designed to build on a firm understanding of the previous ones. If you feel strong in all the material you've covered already, you should try to make it through as much of the extra credit material as possible, which can be found at the end of the first exercise. If you need something outside those resources, flag down a TA and they'll help you find a productive exercise for your situation.
+If you finish one of the assignments ahead of schedule, your best bet is to research and reinforce any previous concepts you'd felt shakey on, since each lecture is designed to build on a firm understanding of the previous ones. If you need something outside those resources, flag down a TA and they'll help you find a productive exercise for your situation.
 
 
 ---
@@ -47,25 +47,6 @@ In this section, we'll discuss the nuances of JavaScript's first-order function 
 - DO NOT use the chrome dev tools panel to log or view the value of `ACTUAL` in real-time. Instead, try to reason through each test, using your understanding of JavaScript functions to arrive at the correct answer.
 - As you update the value of '???' for each test, switch back to the browser and reload functions/index.html to see if you got it right.
 
-
----
-
-## Functions And Objects Extra Credit
-
-If at any point you find yourself ahead of schedule, (and understand the content well enough to need a different challenge,) we've assembled a gauntlet of instructive challenges. You'll be re-implementing the popular JavaScript utility library, [Underscore.js](http://underscorejs.org/).
-
-Please treat this as your go-to project any time you are ahead of the class and looking for some useful new experience with the language.
-
-### Goals
-
-- You'll be re-implementing some of the functionality of the popular utility library, Underscore.js. The file `extracredit/spec/underbarSpec.js` contains a suite full of failing tests.
-- Your goal is to make each of the tests pass by implementing the missing functions in `extracredit/src/underbar.js`.
-- Run the tests by opening `SpecRunner.html` in your browser.
-- Many of the functions operate on "collections." They can take both arrays or objects as their arguments and you need to be able to handle both cases.
-- Some browsers provide built-in functions like `forEach`, `map`,`reduce` and `filter` that replicate the functionality you're implementing, so don't use them to implement your functions.
-- Don't cheat by looking at the Underscore.js source code. You want to be capable of producing this code on your own, without using a reference.
-- It's a great idea to reference the official library's [documentation](http://underscore.js) any time our inline comments don't make clear how the function is intended to behave.
-- You can use `Array.isArray(obj)` to find out whether an object is an array. The `arguments` object is very similar to an array, but note that it does not support most array functions (such as `slice` or `push`). You can read more about this [here](http://www.sitepoint.com/arguments-a-javascript-oddity/).
 
 ---
 
@@ -166,9 +147,7 @@ Make the tests pass in the SpecRunner file that are in the prototypal column.
 ## OOP Extra credit
 
 Use the [Chrome profiling tools] to compare the performance of each instantiation pattern.
--  Create a profiling test case in each of your test suites.  It should instantiate and use a large number of stacks.
--  Comment out all but one test suite.  Record the results of the profiler.  Repeat for each step of the refactor.
--  Write a brief analysis of your results.
+-  Use jsperf.com to create a profiling test case in each of your test suites.  It should instantiate and use a large number of stacks.
 
 
 ---
