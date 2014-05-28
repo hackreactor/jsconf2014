@@ -1,0 +1,244 @@
+<html>
+  <head>
+    <title>The workflow of writing JavaScript</title>
+  </head>
+  <body>
+
+    This html document contains an inline script tag full of code, which executes every you refresh.
+    To investigate further, open the file in a text editor (like SublimeText 2), and follow the
+    instructions written into the code comments.
+
+    <script>
+
+      /***************************************************************************/
+
+
+      /* SETUP:
+       *
+       * Open this file in Google Chrome as-is, to see what happens when we load a basic HTML page
+       * that includes the tiny bit of JavaScript code, all of which is currently commented out.
+       */
+
+
+      /***************************************************************************/
+
+
+      /* NEXT:
+       *
+       * These variables and values are being set up for you to set the stage of your explorations.
+       * Other than creating variables, and assigning values to them, no work is being done by the
+       * following block.
+       *
+       * Uncomment it and reload the page in your browser to see what happens when a little code
+       * runs but has no side effects.
+       */
+
+      /*
+      var sentence;
+
+      var capitalize = function(input) {
+        var firstLetter = input[0];
+        var rest = input.slice(1);
+
+        return firstLetter.toUpperCase() + rest;
+      };
+      */
+
+      /* When you've completed this step and refreshed:
+       *
+       * Nothing visible should have happened or changed about the page since last time.
+       */
+
+
+      /***************************************************************************/
+
+
+      /* NEXT:
+       *
+       * To see what happens when we run a function that has user-visible side effects, like the
+       * `alert` function. uncomment the following block of code and refresh the browser window
+       * that points to this page
+       */
+
+      /*
+      alert(3);
+      */
+
+      /* When you've completed this step and refreshed:
+       *
+       * You should have seen an alert box pop up on your browser
+       */
+
+
+      /***************************************************************************/
+
+
+      /* NEXT:
+       * To see what happens when we introduce a debugger statment, uncomment the following block
+       * of code and refresh the browser window that points to this page.
+       */
+
+      /*
+      debugger;
+      sentence = 'hello';
+      sentence = sentence + ' world';
+      sentence = capitalize(sentence);
+      */
+
+      /* When you've completed this step and refreshed:
+       *
+       * Nothing visible should have happened or changed about the page since last time.
+       *
+       * Explanation:
+       *
+       * The debugger statement has no user-visible effect, to prevent the people viewing your web
+       * page from getting interrupted by developer tools and commands. As a developer though,
+       * you'll want to step through the code, which you can do by opening the developer console,
+       * and then refreshing the page. Debugger statements will only be paused at when the console
+       * is already open at the moment the interpreter hits them.
+       */
+
+
+      /***************************************************************************/
+
+
+      /* NEXT:
+       *
+       * Open your developer console and refresh the page, then play around with the "step over",
+       * "step into", and "play" buttons. You may refresh the page as many times as you like to
+       * learn how the buttons work.
+       */
+
+      /* When you've completed this step and refreshed:
+       *
+       * You should find yourself paused at the debugger line above, and will have an opportunity
+       * to navigate through the code using the code navigation commands.
+       */
+
+
+      /***************************************************************************/
+
+
+      /* NEXT:
+       *
+       * Uncomment the following block of code and refresh the page.
+       *
+       * Note, if you've still got the debugger line uncommented, you'll have to press "play" in
+       * order to let the code run all the way down to the error. Alternatively, you may step over
+       * line by line until you reach the error, to see the circumstances around the error in more
+       * detail.
+       */
+
+      /*
+      console.log('this text will show up as developer-facing output');
+      */
+
+      /* When you've completed this step and refreshed:
+       *
+       * You should see the sentence above appear in the console section of the developer tools.
+       */
+
+
+      /***************************************************************************/
+
+
+      /* NEXT:
+       *
+       * Let's see what a runtime error looks like. Be sure your Google Chrome developer tools
+       * window is open to the 'console' tab, where errors will be displayed. Then, uncomment the
+       * following code and refresh the page.
+       */
+
+      /*
+      var notYetDefined;
+      notYetDefined.inaccessableProperty;
+      console.log('This line will not run until the error in the previous line is fixed.');
+      */
+
+      /* When you've completed this step and refreshed:
+       *
+       * You should see a red error in the console, describing a problem with property access on an
+       * undefined value. This will include certain information, like the line number that it
+       * occurred on.
+       */
+
+
+      /***************************************************************************/
+
+
+      /* NEXT:
+       *
+       * Resolve the error in the line of code that is causing it, in any way you like.
+       */
+
+      /* When you've completed this step and refreshed:
+       *
+       * The error message should be gone.
+       */
+
+
+      /***************************************************************************/
+
+
+      /* NEXT:
+       *
+       * Let's see what a syntax error looks like. Be sure your Google Chrome developer tools window
+       * is open to the 'console' tab, where errors will be displayed. Then, uncomment the following
+       * code and refresh the page. It will produce a syntax error that causes the whole file to
+       * fail to load.
+       */
+
+      /*
+      capitalize('anything'];
+      */
+
+      /* When you've completed this step and refreshed:
+       *
+       * None of the code in this script block will execute, since the interpreter sees the entire
+       * block as unparsable in the first place.
+       *
+       * Explanation:
+       *
+       * When the intepreter sees a major issue in the structure of the code (like the mis-matched
+       * paren style above), the whole file is ignored. You'll notice that the failure pattern is
+       * considerably different from a runtime error, in that the symptoms are much further
+       * reaching. In this case, no alerts, console logs, debuggers, or other work left in the code
+       * can be seen to have any effect.
+       *
+       * If we had other files or other script tags within this file that were themselves free from
+       * syntax errors, then they would be able to execute separately, despite the errors inside
+       * this script block. But every line of code in this particular script block will be ignored.
+       */
+
+
+      /***************************************************************************/
+
+
+      /* NEXT:
+       *
+       * Resolve the error in the line of code that is causing it, in any way you like.
+       */
+
+      /* When you've completed this step and refreshed:
+       *
+       * The error message should be gone and all of your previous console output should be restored.
+       */
+
+
+      /***************************************************************************/
+
+
+      /* FOLLOWUP:
+       *
+       * Investigate the other tabs in the developer tools pane, particularly the elements tab,
+       * which will show you an HTML-like rendering of the on-screen DOM tree that was generated as
+       * a result of your browser parsing the HTML structure in this text document.
+       */
+
+
+      /***************************************************************************/
+
+
+    </script>
+  </body>
+</html>
