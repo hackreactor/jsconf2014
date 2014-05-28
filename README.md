@@ -58,7 +58,7 @@ In this main portion of the course, we'll cover the 3 most visible idiosyncrasie
 
 ## Provided groundwork - Functional instantiation
 
-The funtional instantiation style is completed already in `src/functional/stack.js` to get you started. It's worth reading this implementation fully so you understand how you could write a class just using functions, rather than involving any of the other, more complicated language features.
+The functional instantiation style is completed already in `src/functional/stack.js` to get you started. It's worth reading this implementation fully so you understand how you could write a class just using functions, rather than involving any of the other, more complicated language features.
 
 ### Goal
 
